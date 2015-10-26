@@ -30,6 +30,29 @@ class Rahaman extends Mahabub{
 	}
 }
 
+trait Mahabub{
+	public function hello()
+	{
+		echo "Hello ";
+	}
+}
+
+trait Rahaman1{
+	public function world()
+	{
+		echo "World";
+	}
+}
+
+class MyHelloWorld{
+	use Mahabub, Rahaman;
+	
+	public function sayExclamationWorld()
+	{
+		echo "!";
+	}
+}
+
 $obj = new Rahaman();
 $obj->hello();
 echo $obj->foo();
